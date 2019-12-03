@@ -27,4 +27,9 @@ class SessionsController < ApplicationController
     session.delete(:user_id)
     @current_user = nil
   end
+  
+  # 自分が書いたコード
+  def sign_up_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
 end
