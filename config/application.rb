@@ -16,4 +16,9 @@ module Pictgram
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+  
+  # 自分が書いた
+  class Application < Rails::Application
+      config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+  end
 end
