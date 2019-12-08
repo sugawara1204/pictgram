@@ -30,8 +30,7 @@ private
     def password_params
       params.require(:session).permit(:password)
     end
-
-  private
+    
   def log_in(user)
     session[:user_id] = user.id
   end

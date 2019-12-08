@@ -22,14 +22,4 @@ class TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:image, :description)
   end
-  
-  # 自分が書いた
-  def login_check
-    unless user_signed_in?
-      flash[:alert] = "ログインしてください"
-      redirect_to root_path
-    end
-  end
-  
-  before_action :login_check, only: [:new, :edit, :update, :destroy]
 end
