@@ -42,5 +42,4 @@ ActiveRecord::Schema.define(version: 2019_12_08_043315) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
   end
-
 end
