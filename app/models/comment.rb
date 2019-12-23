@@ -1,4 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :image
   validates :content, presence: true
+   belongs_to :user
+  belongs_to :topic
 end
